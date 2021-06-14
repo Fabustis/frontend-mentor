@@ -1,0 +1,108 @@
+:root {
+	--dark-cyan: hsl(185, 75%, 39%);
+	--very-dark-desaturated-blue: hsl(229, 23%, 23%);
+	--dark-grayish-blue: hsl(227, 10%, 46%);
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+
+	background-color: var(--dark-cyan);
+  	
+  	text-align:center;
+	font-size : 1rem;
+	font-weight: 400;
+	font-family:'Kumbh Sans', sans-serif;
+ 	color : var(--dark-grayish-blue);
+	font-weight: 400;0
+}
+
+/* Doesn't work well */
+/*
+.card::before{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	content: "";
+	background-image: url(./images/bg-pattern-top.svg);
+	top:  -40vh;
+	left: -5vw;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+.card::after{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	content: "";
+	background-image: url(./images/bg-pattern-bottom.svg);
+	top:  60vh;
+	left: 50vw;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+*/
+/* Alternative : */
+body {
+	background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+	background-repeat: no-repeat, no-repeat;
+	background-position: right 55vw bottom 30vh, left 53vw top 50vh;
+}
+
+
+.card {
+	width: 375px;
+	height: 375px;
+
+	background-color: white;
+	background-image: url(./images/bg-pattern-card.svg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-radius: 15px;
+}
+.header-card {
+	position: relative;
+	top: 25%;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.header-card {
+	padding-bottom: 10px;
+}
+
+.card img {
+	border: 6px solid white;
+	border-radius: 60px;
+}
+
+.stats {
+	display : flex;
+	margin: 29% 0 0 0;
+	justify-content: space-evenly;
+}
+
+h1 {
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.name, h2 {
+	font-weight: 700;
+	font-size: 1.125rem;
+	color: hsl(0, 0%, 20%);
+	margin: 0;
+}
+
+.attribution{
+	position: fixed;
+	bottom: 1vh;
+	left: 1vw;
+}
+
+/*
+@media screen and (min-width: 1440px) {
+}*/
